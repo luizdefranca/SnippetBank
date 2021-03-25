@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		2584B659260D468100CA7360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2584B658260D468100CA7360 /* Assets.xcassets */; };
 		2584B65C260D468100CA7360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2584B65A260D468100CA7360 /* LaunchScreen.storyboard */; };
 		2584B666260D4D7A00CA7360 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B665260D4D7A00CA7360 /* MasterTableViewController.swift */; };
+		2584B669260D503F00CA7360 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B668260D503F00CA7360 /* DetailViewController.swift */; };
+		2584B66D260D540600CA7360 /* Sourceful in Frameworks */ = {isa = PBXBuildFile; productRef = 2584B66C260D540600CA7360 /* Sourceful */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		2584B65B260D468100CA7360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2584B65D260D468100CA7360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2584B665260D4D7A00CA7360 /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		2584B668260D503F00CA7360 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2584B66D260D540600CA7360 /* Sourceful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				2584B64F260D467E00CA7360 /* AppDelegate.swift */,
 				2584B651260D467E00CA7360 /* SceneDelegate.swift */,
 				2584B655260D467E00CA7360 /* Main.storyboard */,
+				2584B668260D503F00CA7360 /* DetailViewController.swift */,
 				2584B665260D4D7A00CA7360 /* MasterTableViewController.swift */,
 				2584B658260D468100CA7360 /* Assets.xcassets */,
 				2584B65A260D468100CA7360 /* LaunchScreen.storyboard */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = SnippetBank;
+			packageProductDependencies = (
+				2584B66C260D540600CA7360 /* Sourceful */,
+			);
 			productName = SnippetBank;
 			productReference = 2584B64C260D467E00CA7360 /* SnippetBank.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 2584B643260D467E00CA7360;
+			packageReferences = (
+				2584B66B260D540600CA7360 /* XCRemoteSwiftPackageReference "Sourceful" */,
+			);
 			productRefGroup = 2584B64D260D467E00CA7360 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 				2584B650260D467E00CA7360 /* AppDelegate.swift in Sources */,
 				2584B666260D4D7A00CA7360 /* MasterTableViewController.swift in Sources */,
 				2584B652260D467E00CA7360 /* SceneDelegate.swift in Sources */,
+				2584B669260D503F00CA7360 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2584B66B260D540600CA7360 /* XCRemoteSwiftPackageReference "Sourceful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/Sourceful.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2584B66C260D540600CA7360 /* Sourceful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2584B66B260D540600CA7360 /* XCRemoteSwiftPackageReference "Sourceful" */;
+			productName = Sourceful;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2584B644260D467E00CA7360 /* Project object */;
 }
