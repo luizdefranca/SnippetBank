@@ -16,6 +16,10 @@
 		2584B669260D503F00CA7360 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B668260D503F00CA7360 /* DetailViewController.swift */; };
 		2584B66D260D540600CA7360 /* Sourceful in Frameworks */ = {isa = PBXBuildFile; productRef = 2584B66C260D540600CA7360 /* Sourceful */; };
 		2584B670260D593E00CA7360 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B66F260D593E00CA7360 /* Snippet.swift */; };
+		2584B681260D5EA800CA7360 /* CodeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B67D260D5EA800CA7360 /* CodeFont.swift */; };
+		2584B682260D5EA800CA7360 /* EditableToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B67E260D5EA800CA7360 /* EditableToolbarView.swift */; };
+		2584B683260D5EA800CA7360 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B67F260D5EA800CA7360 /* Themes.swift */; };
+		2584B684260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B680260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		2584B665260D4D7A00CA7360 /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		2584B668260D503F00CA7360 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2584B66F260D593E00CA7360 /* Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snippet.swift; sourceTree = "<group>"; };
+		2584B67D260D5EA800CA7360 /* CodeFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeFont.swift; sourceTree = "<group>"; };
+		2584B67E260D5EA800CA7360 /* EditableToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableToolbarView.swift; sourceTree = "<group>"; };
+		2584B67F260D5EA800CA7360 /* Themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		2584B680260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+activeTraitCollection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +76,23 @@
 				2584B66F260D593E00CA7360 /* Snippet.swift */,
 				2584B668260D503F00CA7360 /* DetailViewController.swift */,
 				2584B665260D4D7A00CA7360 /* MasterTableViewController.swift */,
+				2584B67D260D5EA800CA7360 /* CodeFont.swift */,
+				2584B67E260D5EA800CA7360 /* EditableToolbarView.swift */,
+				2584B67F260D5EA800CA7360 /* Themes.swift */,
+				2584B680260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift */,
+				2584B687260D5ECB00CA7360 /* utils */,
 				2584B658260D468100CA7360 /* Assets.xcassets */,
 				2584B65A260D468100CA7360 /* LaunchScreen.storyboard */,
 				2584B65D260D468100CA7360 /* Info.plist */,
 			);
 			path = SnippetBank;
+			sourceTree = "<group>";
+		};
+		2584B687260D5ECB00CA7360 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +174,12 @@
 				2584B650260D467E00CA7360 /* AppDelegate.swift in Sources */,
 				2584B666260D4D7A00CA7360 /* MasterTableViewController.swift in Sources */,
 				2584B670260D593E00CA7360 /* Snippet.swift in Sources */,
+				2584B681260D5EA800CA7360 /* CodeFont.swift in Sources */,
+				2584B682260D5EA800CA7360 /* EditableToolbarView.swift in Sources */,
+				2584B683260D5EA800CA7360 /* Themes.swift in Sources */,
 				2584B652260D467E00CA7360 /* SceneDelegate.swift in Sources */,
 				2584B669260D503F00CA7360 /* DetailViewController.swift in Sources */,
+				2584B684260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

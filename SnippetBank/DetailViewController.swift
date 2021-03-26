@@ -35,3 +35,11 @@ class DetailViewController: UIViewController {
 
 
 }
+
+extension DetailViewController: SnnipetSelectionDelegate {
+    func snnipetSelected(_ newSnippet: Snippet) {
+        snippet = newSnippet
+    }
+
+    
+}
