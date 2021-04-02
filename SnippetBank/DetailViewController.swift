@@ -13,7 +13,9 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var syntaxTextView: SyntaxTextView!
 
-    let lexer = SwiftLexer()
+    let swiftLexer = SwiftLexer()
+    let pythonLexer = Python3Lexer()
+    @IBOutlet weak var languageLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +26,32 @@ class DetailViewController: UIViewController {
         // Attach a toolbar with common key symbols to make typing easier.
         syntaxTextView.contentTextView.inputAccessoryView = UIView.editingToolbar(target: self,
                                                                                   action: #selector(insertCharacter))
+
+        setupMenuBar()
+        lexerForSource("swift")
     }
 
     
+    private func setupMenuBar(){
 
+        let swiftMenuitem = UIAction(title: "Swift", image: UIImage(named: "swift"), handler: { (_) in
+            self.lexerForSource("swift")
+            self.languageLabel.text = "Swift"
+        })
+
+        let pythonMenuItem = UIAction(title: "Python", image: UIImage(named: "python"), handler: { (_) in
+            self.lexerForSource("python")
+            self.languageLabel.text = "Python"
+
+        })
+        
+
+        var menu: UIMenu {
+            return UIMenu(title: "", image: nil, identifier: nil, options: [], children: [pythonMenuItem, swiftMenuitem])
+        }
+        let barButtonItem = UIBarButtonItem(title: "Language", image: nil, primaryAction: nil, menu: menu)
+        navigationItem.setRightBarButton(barButtonItem, animated: true)
+    }
     var snippet: Snippet? {
         didSet {
             refreshUI()
@@ -68,6 +92,12 @@ extension DetailViewController: SnnipetSelectionDelegate {
 extension DetailViewController: SyntaxTextViewDelegate {
     /// Send back our Swift lexer for this source code.
     func lexerForSource(_ source: String) -> Lexer {
-        return lexer
+        if source == "swift" {
+            return swiftLexer
+        } else {
+            return pythonLexer
+        }
     }
+
+    
 }

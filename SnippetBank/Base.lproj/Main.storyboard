@@ -20,23 +20,32 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zb-Lf-ruH">
+                                <rect key="frame" x="376.5" y="844" width="37.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zbI-Rs-sD6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8Zb-Lf-ruH" firstAttribute="trailing" secondItem="zbI-Rs-sD6" secondAttribute="trailing" id="HQH-5L-CPR"/>
                             <constraint firstItem="zbI-Rs-sD6" firstAttribute="bottom" secondItem="D5A-nm-Odc" secondAttribute="bottom" id="ILT-GJ-owU"/>
+                            <constraint firstItem="8Zb-Lf-ruH" firstAttribute="bottom" secondItem="zbI-Rs-sD6" secondAttribute="bottom" id="Uld-Mb-oyY"/>
                             <constraint firstItem="zbI-Rs-sD6" firstAttribute="trailing" secondItem="D5A-nm-Odc" secondAttribute="trailing" id="VCp-KV-2v4"/>
                             <constraint firstItem="D5A-nm-Odc" firstAttribute="leading" secondItem="zbI-Rs-sD6" secondAttribute="leading" id="am9-9y-r8O"/>
                             <constraint firstItem="D5A-nm-Odc" firstAttribute="top" secondItem="zbI-Rs-sD6" secondAttribute="top" id="nON-Qf-cKK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="languageLabel" destination="8Zb-Lf-ruH" id="9C0-bY-Khb"/>
                         <outlet property="syntaxTextView" destination="D5A-nm-Odc" id="UTJ-Jl-hJZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VxU-xE-gmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="256"/>
+            <point key="canvasLocation" x="-7.2463768115942031" y="255.80357142857142"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="ijs-1e-AZ2">
