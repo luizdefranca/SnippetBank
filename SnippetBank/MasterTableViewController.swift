@@ -60,13 +60,13 @@ class MasterTableViewController: UITableViewController {
 
         let addAction = UIAlertAction(title: "Save", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force
-            let snippetName = textField?.text ?? "New Snippet\(self.snippets.count)"
 
-            let snippet = Snippet(name: snippetName, content: "")
-            self.snippets.append(snippet)
-            self.tableView.reloadData()
-
-            print("Text field: \(textField?.text)")
+            if let snippetName = textField?.text {
+                let snippet = Snippet(name: snippetName.isEmpty ? "New Snippet \(self.snippets.count)": snippetName, content: "")
+                self.snippets.append(snippet)
+                self.tableView.reloadData()
+                print("Text field: \(textField?.text)")
+            } 
         })
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -74,8 +74,6 @@ class MasterTableViewController: UITableViewController {
         alert.addAction(addAction)
 
         self.present(alert, animated: true, completion: nil)
-
-
 
     }
 
