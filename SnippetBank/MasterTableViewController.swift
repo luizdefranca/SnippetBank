@@ -51,6 +51,31 @@ class MasterTableViewController: UITableViewController {
     }
 
     @objc func addSnippet(){
+        print("adding ...")
+        let alert = UIAlertController(title: "New Snippet", message: "Type the name of new snippet", preferredStyle: .alert)
+
+        alert.addTextField { (textField) in
+            textField.placeholder = "New Snippet\(self.snippets.count)"
+        }
+
+        let addAction = UIAlertAction(title: "Save", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force
+            let snippetName = textField?.text ?? "New Snippet\(self.snippets.count)"
+
+            let snippet = Snippet(name: snippetName, content: "")
+            self.snippets.append(snippet)
+            self.tableView.reloadData()
+
+            print("Text field: \(textField?.text)")
+        })
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(addAction)
+
+        self.present(alert, animated: true, completion: nil)
+
+
 
     }
 
