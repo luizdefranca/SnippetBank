@@ -84,8 +84,8 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: SnnipetSelectionDelegate {
-    func snnipetSelected(_ newSnippet: Snippet) {
-        snippet = newSnippet
+    func snnipetSelected(_ selectedSnippet: Snippet) {
+        snippet = selectedSnippet
     }
 }
 

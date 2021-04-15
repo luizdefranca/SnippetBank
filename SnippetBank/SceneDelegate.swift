@@ -50,21 +50,63 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func initializateSplitView(){
-        guard
-            let splitViewController = window?.rootViewController as? UISplitViewController,
-            let leftNavController = splitViewController.viewControllers.first
-                as? UINavigationController,
-            let masterViewController = leftNavController.viewControllers.first
-                as? MasterTableViewController,
-            let detailNavViewController = splitViewController.viewControllers.last
-                as? UINavigationController,
-            let detailViewController = detailNavViewController.viewControllers.first
-                as? DetailViewController
-        else { fatalError() }
+//        guard
+//            let splitViewController = window?.rootViewController as? UISplitViewController,
+//            let tagNavController = splitViewController.viewControllers.first
+//                as? UINavigationController,
+//            let tagViewController = tagNavController.viewControllers.first
+//                as? SnippetTableViewController,
+//            let snippetNavController = splitViewController.viewControllers[2] as? UINavigationController,
+//            let snippetViewController = snippetNavController.viewControllers.first as? SnippetTableViewController,
+//            let detailNavViewController = splitViewController.viewControllers.last
+//                as? UINavigationController,
+//            let detailViewController = detailNavViewController.viewControllers.first
+//                as? DetailViewController
+//        else { fatalError() }
 
-        let firstSnippet = masterViewController.snippets.first
-        detailViewController.snippet = firstSnippet
-        masterViewController.delegate = detailViewController
+//        guard let splitViewController = window?.rootViewController as? UISplitViewController else {
+//            fatalError()
+//        }
+
+
+        let splitViewController = UISplitViewController(style: .tripleColumn)
+        splitViewController.delegate = self
+
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+
+
+        let vc1 = storyBoard.instantiateViewController(withIdentifier: "TagViewController") as! TagViewController
+        vc1.selectedTag = .persistence
+
+        let vc2 = storyBoard.instantiateViewController(withIdentifier: "SnippetTableViewController") as! SnippetTableViewController
+        vc1.delegate = vc2
+        vc2.selectedTag = .persistence
+
+        let vc3 = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc2.delegate = vc3
+        vc3.snippet = vc2.snippets.first
+//
+        splitViewController.preferredDisplayMode = UISplitViewController.DisplayMode.twoBesideSecondary
+       
+        splitViewController.setViewController(vc1, for: .primary)
+
+
+        splitViewController.setViewController(vc2, for: .supplementary)
+        splitViewController.setViewController(vc3, for: .secondary)
+        //
+//        let firstSnippet = snippetViewController.snippets.first
+//        detailViewController.snippet = firstSnippet
+//        snippetViewController.delegate = detailViewController
+//        let nav = splitViewController.viewControllers
+//        splitViewController.preferredDisplayMode = UISplitViewController.DisplayMode.oneBesideSecondary
+        window?.rootViewController = splitViewController
+        window?.makeKeyAndVisible()
     }
 }
 
+extension SceneDelegate: UISplitViewControllerDelegate {
+    func splitViewController(_ svc: UISplitViewController, topColumnForCollapsingToProposedTopColumn proposedTopColumn: UISplitViewController.Column) -> UISplitViewController.Column {
+        .primary
+    }
+
+}

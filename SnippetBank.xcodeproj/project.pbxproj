@@ -12,7 +12,7 @@
 		2584B657260D467E00CA7360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2584B655260D467E00CA7360 /* Main.storyboard */; };
 		2584B659260D468100CA7360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2584B658260D468100CA7360 /* Assets.xcassets */; };
 		2584B65C260D468100CA7360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2584B65A260D468100CA7360 /* LaunchScreen.storyboard */; };
-		2584B666260D4D7A00CA7360 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B665260D4D7A00CA7360 /* MasterTableViewController.swift */; };
+		2584B666260D4D7A00CA7360 /* SnippetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B665260D4D7A00CA7360 /* SnippetTableViewController.swift */; };
 		2584B669260D503F00CA7360 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B668260D503F00CA7360 /* DetailViewController.swift */; };
 		2584B66D260D540600CA7360 /* Sourceful in Frameworks */ = {isa = PBXBuildFile; productRef = 2584B66C260D540600CA7360 /* Sourceful */; };
 		2584B670260D593E00CA7360 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B66F260D593E00CA7360 /* Snippet.swift */; };
@@ -20,6 +20,9 @@
 		2584B682260D5EA800CA7360 /* EditableToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B67E260D5EA800CA7360 /* EditableToolbarView.swift */; };
 		2584B683260D5EA800CA7360 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B67F260D5EA800CA7360 /* Themes.swift */; };
 		2584B684260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B680260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift */; };
+		2587A8872617E3D2005FA487 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2587A8862617E3D2005FA487 /* Language.swift */; };
+		2587A8902617E6C6005FA487 /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2587A88F2617E6C6005FA487 /* TagViewController.swift */; };
+		2587A8942617E99B005FA487 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2587A8932617E99B005FA487 /* Tag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,13 +33,16 @@
 		2584B658260D468100CA7360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2584B65B260D468100CA7360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2584B65D260D468100CA7360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2584B665260D4D7A00CA7360 /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		2584B665260D4D7A00CA7360 /* SnippetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetTableViewController.swift; sourceTree = "<group>"; };
 		2584B668260D503F00CA7360 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2584B66F260D593E00CA7360 /* Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snippet.swift; sourceTree = "<group>"; };
 		2584B67D260D5EA800CA7360 /* CodeFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeFont.swift; sourceTree = "<group>"; };
 		2584B67E260D5EA800CA7360 /* EditableToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableToolbarView.swift; sourceTree = "<group>"; };
 		2584B67F260D5EA800CA7360 /* Themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		2584B680260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+activeTraitCollection.swift"; sourceTree = "<group>"; };
+		2587A8862617E3D2005FA487 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		2587A88F2617E6C6005FA487 /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
+		2587A8932617E99B005FA487 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,19 +76,13 @@
 		2584B64E260D467E00CA7360 /* SnippetBank */ = {
 			isa = PBXGroup;
 			children = (
+				2587A8852617E388005FA487 /* controller */,
+				2587A8842617E37B005FA487 /* view */,
+				2587A8832617E371005FA487 /* model */,
 				2584B64F260D467E00CA7360 /* AppDelegate.swift */,
 				2584B651260D467E00CA7360 /* SceneDelegate.swift */,
-				2584B655260D467E00CA7360 /* Main.storyboard */,
-				2584B66F260D593E00CA7360 /* Snippet.swift */,
-				2584B668260D503F00CA7360 /* DetailViewController.swift */,
-				2584B665260D4D7A00CA7360 /* MasterTableViewController.swift */,
-				2584B67D260D5EA800CA7360 /* CodeFont.swift */,
-				2584B67E260D5EA800CA7360 /* EditableToolbarView.swift */,
-				2584B67F260D5EA800CA7360 /* Themes.swift */,
-				2584B680260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift */,
 				2584B687260D5ECB00CA7360 /* utils */,
 				2584B658260D468100CA7360 /* Assets.xcassets */,
-				2584B65A260D468100CA7360 /* LaunchScreen.storyboard */,
 				2584B65D260D468100CA7360 /* Info.plist */,
 			);
 			path = SnippetBank;
@@ -91,8 +91,41 @@
 		2584B687260D5ECB00CA7360 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				2584B67D260D5EA800CA7360 /* CodeFont.swift */,
+				2584B67E260D5EA800CA7360 /* EditableToolbarView.swift */,
+				2584B67F260D5EA800CA7360 /* Themes.swift */,
+				2584B680260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		2587A8832617E371005FA487 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2584B66F260D593E00CA7360 /* Snippet.swift */,
+				2587A8862617E3D2005FA487 /* Language.swift */,
+				2587A8932617E99B005FA487 /* Tag.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		2587A8842617E37B005FA487 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2584B655260D467E00CA7360 /* Main.storyboard */,
+				2584B65A260D468100CA7360 /* LaunchScreen.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2587A8852617E388005FA487 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				2584B668260D503F00CA7360 /* DetailViewController.swift */,
+				2584B665260D4D7A00CA7360 /* SnippetTableViewController.swift */,
+				2587A88F2617E6C6005FA487 /* TagViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,15 +204,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2587A8942617E99B005FA487 /* Tag.swift in Sources */,
 				2584B650260D467E00CA7360 /* AppDelegate.swift in Sources */,
-				2584B666260D4D7A00CA7360 /* MasterTableViewController.swift in Sources */,
+				2584B666260D4D7A00CA7360 /* SnippetTableViewController.swift in Sources */,
 				2584B670260D593E00CA7360 /* Snippet.swift in Sources */,
 				2584B681260D5EA800CA7360 /* CodeFont.swift in Sources */,
 				2584B682260D5EA800CA7360 /* EditableToolbarView.swift in Sources */,
 				2584B683260D5EA800CA7360 /* Themes.swift in Sources */,
+				2587A8902617E6C6005FA487 /* TagViewController.swift in Sources */,
 				2584B652260D467E00CA7360 /* SceneDelegate.swift in Sources */,
 				2584B669260D503F00CA7360 /* DetailViewController.swift in Sources */,
 				2584B684260D5EA800CA7360 /* UIApplication+activeTraitCollection.swift in Sources */,
+				2587A8872617E3D2005FA487 /* Language.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
