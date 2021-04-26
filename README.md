@@ -12,4 +12,4 @@ Requisitos:
 3. Adicione outra propriedade no `Snippet` que representa uma lista de Tags (ex: `"Networking"`, `"Persistência"`, ...). Mude o estilo do Split View no storyboard para *triple column* e faça com que a primeira coluna mostre a lista de tags. Crie uma novo view controller que herda de `UITableViewController` chamada de `SupplementaryViewController` que gerencia os snippets e suas tags. Modifique o método `scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions)` do `SceneDelegate` para setar as propriedades e delegates corretamente. (1 ponto). Use o método `show` do `SplitViewController` para mostrar as colunas *supplementary* e *secondary*.
 
  <img src="snippet_Ipad.gif" alt="Um exemplo da tela" width="269" height="377">
- <img src="snippet_iPhone.gif" alt="Um exemplo da tela" width="176" height="364">
+ <img src="snippet_iPhone.gif" alt="Um exemplo da tela" width="176" height="310">
